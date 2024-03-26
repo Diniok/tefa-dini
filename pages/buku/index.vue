@@ -37,6 +37,18 @@
     </nuxt-link>
   </div>
 </template>
+<script setup>
+
+const books = ref([])
+
+const keyword = ref ('')
+
+const getBooks = async () => {
+  const { data, error } = await supabase.from('buku').select(`*, kategori(*)`)
+  .ilike('judul', `%${keyword.value}%`)
+  if(data) books.value = data
+}
+</script>
 
 <style scoped>
 .card-body {
