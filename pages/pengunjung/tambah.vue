@@ -50,9 +50,9 @@
                             <option v-for="(item, i) in objectives" :key="i" :value="item.id">{{ item.nama }}</option>
                         </select>
                     </div>
-                       
+                    
                             <button type="submit" class="btn btn-dark btn-lg rounded-5 px-5 abu">kirim</button>
-                       
+                    
                 </form>
             </div>
         </div>
